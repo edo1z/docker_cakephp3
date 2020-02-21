@@ -6,6 +6,7 @@ docker_cakephp3
 ```
 $ git clone git@github.com:edo1z/docker_cakephp3.git
 $ cd docker_cakephp3
+$ chmod -R 757 www/log
 $ docker-compose up -d
 ```
 

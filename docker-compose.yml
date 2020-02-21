@@ -5,7 +5,7 @@ services:
     ports:
       - "3307:3306"
     volumes:
-      - /c/projects/cake3/db/data:/var/lib/mysql
+      - /c/projects/docker_cakephp3/db/data:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: 'password'
       MYSQL_DATABASE: 'db1'
@@ -14,7 +14,7 @@ services:
       ports:
         - '8007:80'
       volumes:
-        - /c/projects/cake3/www:/var/www
+        - /c/projects/docker_cakephp3/www:/var/www
       depends_on:
         - db
   mailhog:

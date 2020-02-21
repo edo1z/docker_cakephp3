@@ -4,7 +4,7 @@ docker_cakephp3
 ## インストール・コンテナの立ち上げ
 
 ```
-$ git clone git@github:edo1z/docker_cakephp3.git
+$ git clone git@github.com:edo1z/docker_cakephp3.git
 $ cd docker_cakephp3
 $ docker-compose up -d
 ```

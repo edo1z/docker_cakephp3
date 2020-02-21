@@ -1,0 +1,24 @@
+version: '3.7'
+services:
+  db:
+    build: ./db
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./db/data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 'password'
+      MYSQL_DATABASE: 'db1'
+  web:
+      build: ./web
+      ports:
+        - '8007:80'
+      volumes:
+        - ./www:/var/www
+      depends_on:
+        - db
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - "8027:8025"
+      - "1027:1025"
